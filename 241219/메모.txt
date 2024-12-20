@@ -1,0 +1,167 @@
+"Web Editor 세팅"
+- Visual Studio Code 초기화
+1. C:\Users\EZEN\.vscode
+2. C:\Users\EZEN\AppData\Roaming\Code
+3. Visual Studio Code 제거 후 재설치
+
+
+
+"Code로 열기"
+내가 현재 작업하고자 하는 폴더를 Root 폴더로 설정한 상태에서
+바로 Visual Studio Code를 활성화할 수 있게 해주는 기능
+
+
+
+"파일명 / 변수명"
+1. kdtFed : Cammel 표기법 (두번째 단어의 첫글자를 대문자 표기)
+2. kdt_fed : Sneak 표기법 (두 단어의 사이에 언더바 삽입)
+3. Kdtfed : Hungary 표기법 (첫번째 단어의 첫글자를 대문자 표기)
+
+
+
+"작업환경 세팅 방식"
+1. GUI (Graphic User Interface) : 아이콘 클릭으로 실행
+2. CLI (Command Line Interface) : 명령어 입력으로 실행
+
+> cd
+> mkdir : 경로 설정
+> cd.. : 현재 경로보다 상위 경로 이동
+> code . : Visual Studio Code 실행
+
+"Visual Studio Code 설정"
+1. 환경 설정 : Ctrl + ,
+- Tab Size : 기본 들여쓰기 정도 설정
+- Word Wrap : 가로로 길게 작성된 문장을 자동으로 세로 정렬 시켜주는 설정
+- Mouse Wheel Zoom : 현재 보고 있는 웹 에디터를 줌인 / 줌아웃 할 수 있는 설정
+- Emmet > Variables > Lang > Ko : 현재 작업중인 문서의 모국어를 한글로 설정
+
+2. 확장 앱 설정
+- Korean Language Pack
+- Material Icon Theme
+- Live Server : Alt + L + O
+- indent-rainbow
+- Auto Rename Tag
+- htmltagwrap
+- HTML to CSS autocompletion
+- HTML CSS Support
+- CSS Peek
+- Turbo JS
+- Live Sass Compiler
+- Font Awesome Gallery
+- One Dark Pro
+- Power Mode
+- Figma for VS Code
+- Prettier
+> Default Formatter : Prettier - Code Formatter
+> Format On Save : Check
+
+
+
+"Git"
+- 형상 (형태&상태) 기억 관리 툴
+- 버전 관리 툴
+- 로컬 컴퓨터
+
+"GitHub"
+- Git 소유주 정보에 따라 데이터 업로드가 되어지는 위치가 다르게 설정 
+
+"GitHub 정보 초기화"
+- 제어판 > 자격 증명 관리자 > Windows 자격 증명 > 일반 자격 증명
+- 제어판 > 프로그램 > 프로그램 제거 > Git 제거 후 재설치
+
+1개의 제품 혹은 서비스를 개발
+- 개인 작업
+> 메인 + 서브 + 상세
+> 각 버전을 개별적 저장
+
+- 협업 작업
+> 메인 A + 서브 B + 상세 C
+> 각 파일을 하나의 파일로 병합
+> 최종 병합 단계가 아니더라도 수시로 데이터를 취합하여 파일을 정리
+
+"버전 업그레이드 표기"
+A.B.C
+A = 이전 버전과 호환이 되지 않을 정도의 대대한 변경
+B = 이전 버전과 호환되는 내부적 요소의 변경
+C = 버그 수정 같은 자잘한 변경
+
+git -v : git 버전 확인
+git config --list : git 정보 확인
+
+
+
+"전역 환경 변수 설정"
+- 컴퓨터의 어떤 폴더 혹은 프로젝트에서든 공통적으로 영향을 미칠 수 있는 세팅
+> 명령 프롬포트를 관리자 권한으로 실행
+
+global (전역) ↔ local (지역)
+
+
+
+"Git ↔ GitHub"
+- 로컬 컴퓨터에서 프로젝트 진행
+> untracked file
+> staging area (임시 대기 공간) unmodified
+> commited file (repository 생성, 관리)
+
+개발자가 버전 관리를 할 때
+1~10 까지의 데이터를 몇 회에 나누어 관리할 것인지 개인차가 존재
+
+개발자가 작업중인 폴더 : Working Directory
+
+여러 개발자들이 각자의 도구를 가지고 공동의 컴퓨터를 공유하면서 작업
+
+> git init : git 초기화 후 .git 폴더 생성
+> git add . : staging 상태로 전환
+> git status : 상태 확인
+> git remote -v : 로컬 컴퓨터와 github간의 연결 상태 확인
+> git commit -m "241219" : repository에 데이터 저장
+> git push origin master : 로컬 컴퓨터에서 github로 이동
+> branch : 1개의 repository에는 복수의 branch를 생성 가능
+
+
+
+"GitHub에 commit된 데이터를 다른 컴퓨터에서 받는 법"
+1. GitHub repository에서 Zip파일 직접 받기
+2. GitHub repository에서 복제하는 방법
+> git clone https://github.com/Myeongkwan72/kdtfed-241219.git
+> 대상 repository의 모든 파일을 복제_불필요한 파일까지 복제
+3. git pull origin master
+> git init
+> git pull https://github.com/Myeongkwan72/kdtfed-241219.git
+> 필요한 데이터만 가져올 수 있음
+
+
+window + R
+sysdm.cpl
+시스템 속성 > 고급 > 환경 변수 > 시스템 변수 > Path > 편집 > 환경 변수 편집 > 새로 만들기
+> 찾아보기 > 유저 > AppData > 확인
+
+
+
+좌측 / 레이어 패널 : 현재 작업중인 레이어간의 계층 구조를 확인하는 영역
+우측 / 속성 패널 : 컨텐츠의 세부 속성 및 정보를 입력,수정,삭제 등을 실행하는 영역
+중앙 / 캔버스 : 실제 UI 작업을 진행하는 영역
+
+기기별 대표 화면 사이즈
+-1920px = 12 * 120
+-1440px = 12 * 160
+
+-420px = 12 * 35
+-360px = 12 * 30
+
+"10과 가까운 숫자 중 가장 많은 최대공약수를 가지고 있는 숫자 12"
+- 반응형 웹 페이지 제작 시 효율적이기 때문
+> desktop
+> mobile
+
+390px
+좌우 여백 각 35px * 2
+컬럼 간 간격 4px * 5
+ 
+실제 사용 가능 공간
+390-70-20 = 300px
+
+레이아웃 그리드
+
+Auto Layout : Shift + A
