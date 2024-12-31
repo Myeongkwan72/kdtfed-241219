@@ -1,0 +1,11 @@
+display : flex; > (flex-direction : row;)
+별도의 설정이 없다면 중심축은 무조건 가로 (row)
+flex-direction : column; (중심축을 세로로 변경)
+
+align-items; > 
+교차축을 기준으로 정렬
+
+
+
+IA : Information Architecture
+>웹 서비스 & 제품의 전체적인 구조

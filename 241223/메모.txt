@@ -1,0 +1,19 @@
+> 당일 작성한 코드 받아쓰기
+> 코드를 작성한 이유를 고민
+
+
+
+cdn.js 활용하여 font awesome 스크립트 설치 시
+i tag 내 스타일이 정상적으로  작동하지 않음
+
+
+
+Low-Fidelity WireFrame
+- 이미지, 채색 사용 안함
+
+High-Fidelity WireFrame
+- 이미지, 채색 일부 허용
+
+Layout-Grid
+화면 안에 컴포넌트 요소들을 정렬하고자 할 때
+몇 등분으로 나눠서 작업할 것인지 결정하는 가이드라인
