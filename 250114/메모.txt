@@ -1,0 +1,49 @@
+"Flex"
+- flexible한 style을 기존 CSS 스타일보다 쉽고 효율적으로
+  만들어서 적용하기 위해 고안된 스타일 프레임 요소
+
+- 위치 속성을 지정하려는 대상의 부모 요소에 항상 display : flex 적용
+
+- display : flex 적용 시 
+> 자동으로 중심축(row) & 교차축(column) 생성
+> 모든 자식 요소들이 가로 정렬  
+
+
+"justify-content"
+- 중심축으로 정렬
+
+"align-items"
+- 교차축으로 정렬
+
+"align-content"
+- 자식 요소들을 하나의 그룹으로 인식한 후
+  교차축으로 정렬
+
+"align-self"
+- 부모 요소와 다른 스타일 적용
+
+"flex-direction"
+- 중심축 변경
+
+"flex-wrap"
+- 자식 요소들의 너비값 보장
+
+"flex-flow"
+- direction & wrap의 축약
+
+"flex-grow"
+- 부모 요소의 너비값을 기준으로
+  자식 요소들의 너비값을 1/n로 적용
+
+"flex-shrink"
+- 부모 요소의 너비값을 기준으로
+  자식 요소들의 너비값을 1/n로 줄임
+
+"flex-basis"
+- 자식 요소들의 너비값 결정
+
+"flex"
+- grow & shrink & basis의 축약
+
+가상 클래스
+- 특정 조건이 부합할 경우에만 스타일 적용
