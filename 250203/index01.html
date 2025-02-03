@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style01.css" />
+    <script defer src="./script01.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>할인 가격 계산 프로그램 만들기</h1>
+      <section>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKiaIy9Ws1LSl-cB_Ee8WMOomh7P0B3voKQ&s"
+          alt="sale"
+        />
+        <div class="price">
+          <li>
+            <label for="product">원가 : </label>
+            <input id="product" class="input-box" type="text" / name="product">
+            <p>원</p>
+          </li>
+          <li>
+            <label for="rate">할인 : </label>
+            <input id="rate" class="input-box" type="text" / name="rate">
+            <p>%</p>
+          </li>
+          <input id="btn" type="button" value="할인 가격 계산하기" />
+        </div>
+      </section>
+      <div id="result"></div>
+    </main>
+  </body>
+</html>

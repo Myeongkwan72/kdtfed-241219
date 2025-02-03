@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+main section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main section img {
+  width: 100px;
+}
+main section .price {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main section .price li {
+  display: flex;
+  gap: 5px;
+}
+main section .price li input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+main section .price li input:focus {
+  outline: none;
+}
+main #result {
+  text-align: center;
+}
