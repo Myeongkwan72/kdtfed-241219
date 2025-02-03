@@ -29,5 +29,3 @@ console.log(typeof String(num77));
 
 console.log(Boolean("HI"));
 console.log(Boolean(undefined));
-
-// 연산자 & 제어문

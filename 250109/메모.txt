@@ -1,0 +1,44 @@
+- SSR : Server Side Rendering
+> 클라이언트가 서버에 데이터를 요청할 때마다
+   매번 서버에서 데이터를 제공
+
+> 데이터를 제공하는 로딩 시간이 생김 
+
+
+
+- CSR : Client Side Rendering
+> 클라이언트가 서버에 데이터를 처음 요청할 때
+   모든 데이터를 클라이언트에 제공
+
+> 페이지 이동 시간의 단축
+
+
+
+- SPA : Single Page Application
+> 1개의 html 파일에 복수의 JS 파일을 연결해서
+   다수의 페이지를 구현할 수 있도록 만든 앱 설계 방식
+
+"React.js의 단점"
+> 사용자가 특정 웹 사이트의 메인페이지를 처음 열 때
+   메인페이지에 고용량 이미지 혹은 동영상이 들어있다면
+   해당 파일을 불러오는데 굉장히 더디게 출력되는 문제
+
+> 클라이언트가 서버에 요청한 데이터를
+   브라우저에 최초로 출력시킨 상태
+   "FCP (First Contenful Paint)" 가 비효율적
+
+> 클라이언트가 서버에 페이지를 요청한 후
+   FCP 단계까지 도달하는데 걸리는 시간
+   "TTI (Time To Interval)"
+
+
+
+- SSR 회귀
+> Pre-Rendering (사전 렌더링)
+
+
+
+
+transition-duration - 상태 변화가 진행되는 시간
+transition-delay - 상태 변화가 지연되는 시간
+transition-timing-function - 상태 변화가 진행되는 시간

@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  border: 2px solid #000;
+  padding: 20px;
+  text-align: center;
+}
+.frame .heading {
+  font-size: 36px;
+  color: crimson;
+  font-weight: normal;
+}

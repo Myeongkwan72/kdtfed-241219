@@ -1,0 +1,26 @@
+비동기
+
+스타일시트와 html 파일을 동시에 읽어야할 때
+
+
+최초 변수 선언은 전역위치
+하단에 들어가져있는 함수를 통해 연산작업을 통해 얻은 결과값을 가져와서
+다시 전역요소로 가야할때
+
+
+변수값은 두고 식별자만 가져옴
+함수가 호이스팅 될 때는 함수의 함수이름을 앞으로 땡겨서 가져옴
+
+grid : 
+사전에 몇행 몇열로 만들것인지 명확하게 정하고
+수정 및 변경을 최소화 해야함
+
+fraction : 파편 || 조각
+
+auto
+1fr : 1/n으로 나눠갖는다
+
+grid : grid-template-rows / grid-template-columns
+grid-gap : grid-row-gap / grid-column-gap
+
+grid-area : grs/gcs / gre/gce
