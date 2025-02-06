@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$color: (
+  main-dark-color: #333,
+  main-light-color: #eee,
+  star-bg-color: #ff0,
+);
+
+#star-rating {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: map-get($map: $color, $key: main-dark-color);
+  padding: 6px 18px;
+  border-radius: 8px;
+  .stars > .fa-star {
+    cursor: pointer;
+    &.active {
+      color: map-get($map: $color, $key: star-bg-color);
+    }
+  }
+  .print {
+    color: map-get($map: $color, $key: main-light-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

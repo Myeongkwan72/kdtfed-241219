@@ -1,0 +1,151 @@
+/* reset */
+@import "./styles/reset.scss";
+
+/* variables */
+@import "./styles/variables.scss";
+
+/* common */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* contents */
+#container {
+  width: 100%;
+  height: 100vh;
+  background: url("./contents/main-bg.gif") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #outer {
+    width: 807px;
+    height: 544px;
+    background: url("./contents/outerbox.png");
+    #inner {
+      display: flex;
+      padding: 36px;
+      position: relative;
+    }
+  }
+}
+
+/* === inner-left === */
+#inner-left {
+  width: 203px;
+  height: 472px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .inner-left-header {
+    width: 100%;
+    height: 30px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    .zero {
+      color: map-get($map: $color, $key: accent-color);
+    }
+  }
+  .inner-left-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1pc solid map-get($map: $color, $key: gray-color);
+    border-radius: 14px;
+    .left-body-title {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      .title-img {
+        width: 148px;
+        height: 133px;
+        background: url("./contents/profile-img.jpg") center/cover no-repeat;
+      }
+      .title-line {
+        width: 148px;
+        margin: 12px 0;
+        border-top: 1px dotted map-get($map: $color, $key: dark-color);
+      }
+      .title-text {
+        width: 148px;
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .left-body-footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      .feel-title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* === inner-right === */
+#inner-right {
+  width: 524px;
+  height: 472px;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  .inner-right-header {
+    display: flex;
+    justify-content: space-between;
+    color: map-get($map: $color, $key: theme-color);
+    .header-title {
+      font-weight: bold;
+    }
+    .header-privacy {
+      font-size: 1.4rem;
+    }
+  }
+  .inner-right-body {
+    width: 100%;
+    height: 445px;
+    border: 1px solid map-get($map: $color, $key: gray-color);
+    border-radius: 14px;
+    background: map-get($map: $color, $key: light-color);
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+}
+
+/* === navigation === */
+#navigation {
+  width: 70px;
+  height: 110px;
+  position: absolute;
+  top: 20%;
+  right: -69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .navigation-item {
+    background: map-get($map: $color, $key: theme-color);
+    color: map-get($map: $color, $key: light-color);
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid map-get($map: $color, $key: dark-color);
+    border-radius: 0 10px 10px 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
