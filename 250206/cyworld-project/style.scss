@@ -47,6 +47,7 @@ body {
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
+    gap: 11px;
     .zero {
       color: map-get($map: $color, $key: accent-color);
     }
@@ -56,23 +57,38 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1pc solid map-get($map: $color, $key: gray-color);
+    border: 1px solid map-get($map: $color, $key: gray-color);
+    padding: 11px;
     border-radius: 14px;
     .left-body-title {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: center;
+      margin-top: 11px;
+      .title-feel {
+        display: flex;
+        justify-content: center;
+        width: 148px;
+        border: 1px solid map-get($map: $color, $key: gray-color);
+        border-radius: 4px;
+        box-shadow: 0 0 4px rgba($color: #000000, $alpha: 0.2);
+        font-size: 1.2rem;
+        gap: 6px;
+        h4 {
+          color: map-get($map: $color, $key: theme-color);
+        }
+      }
       .title-img {
         width: 148px;
-        height: 133px;
+        height: 124px;
         background: url("./contents/profile-img.jpg") center/cover no-repeat;
       }
       .title-line {
         width: 148px;
-        margin: 12px 0;
+        margin: 4px 0;
         border-top: 1px dotted map-get($map: $color, $key: dark-color);
       }
       .title-text {
@@ -83,12 +99,70 @@ body {
       }
     }
     .left-body-footer {
-      width: 100%;
+      width: 179px;
       display: flex;
       flex-direction: column;
+      padding: 11px 11px 25px 11px;
       gap: 6px;
-      .feel-title {
-        font-weight: bold;
+      .footer-intro {
+        width: 148px;
+        margin-bottom: 8px;
+        .intro-history {
+          width: 148px;
+          display: flex;
+          justify-content: space-between;
+          .history-left {
+            h4 {
+              font-size: 1.1rem;
+              text-align: center;
+              i {
+                font-size: 1.1rem;
+                margin-right: 4px;
+              }
+            }
+          }
+          .history-right {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 1.1rem;
+            margin-top: 3px;
+            color: map-get($map: $color, $key: gray-color);
+            .fa-caret-down {
+              margin-bottom: 4px;
+            }
+          }
+        }
+        .title-line {
+          width: 148px;
+          border-top: 1px dotted map-get($map: $color, $key: dark-color);
+          margin: 4px 0;
+        }
+        .intro-name {
+          display: flex;
+          gap: 5px;
+          align-items: end;
+          h3 {
+            font-size: 1.2rem;
+          }
+          h4 {
+            font-weight: normal;
+            font-size: 1rem;
+          }
+        }
+        .intro-email {
+          font-size: 0.9rem;
+        }
+      }
+      .footer-feel {
+        width: 148px;
+        .feel-title {
+          font-weight: normal;
+          font-size: 1.2rem;
+        }
+        .feel-list {
+          width: 100%;
+        }
       }
     }
   }
@@ -105,6 +179,8 @@ body {
   .inner-right-header {
     display: flex;
     justify-content: space-between;
+    align-items: end;
+    margin: 0 8px;
     color: map-get($map: $color, $key: theme-color);
     .header-title {
       font-weight: bold;
@@ -124,6 +200,53 @@ body {
       height: 100%;
       border: none;
       border-radius: 8px;
+    }
+  }
+}
+
+/* === inner-center === */
+#inner-center {
+  position: absolute;
+  width: 40px;
+  height: 443.9px;
+  margin-top: 28px;
+  .inner-center-item {
+    position: relative;
+    left: 185px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    .center-item-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      .item-top-ring {
+        img {
+          width: 32px;
+          height: 8px;
+        }
+      }
+    }
+    .center-item-bottom {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      .item-bottom-ring {
+        img {
+          width: 32px;
+          height: 8px;
+        }
+      }
     }
   }
 }
