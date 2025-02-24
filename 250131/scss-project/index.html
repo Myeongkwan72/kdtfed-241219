@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+라이브러리 작성 순서
+
+1. jQuery - defer 사용할 필요 없음
+
+2. page scroll effect 
+2-1. modernizr.css
+2-2. velocity.min.js
+2-3. velocity.ui.min.js
+2-4. main.js
+
+3. slick slider
+3-1. slick-theme.css
+3-2. slick.css
+3-3. slick.js
+
+4. feather light
+4-1. feathelight.css
+4-2. featherlight.js
+
+5. scrollTo
+-->
+
     <!-- jQuery -->
     <script src="./jquery-2.1.4.js"></script>
     <!-- page scroll effect -->
@@ -40,15 +63,57 @@
         </div>
       </section> -->
 
-      <!-- <section class="cd-section" id="about">
+      <section class="cd-section visible" id="about">
         <div>
           <div class="content">
-            <h2>About</h2>
+            <div class="about-inner">
+              <div class="about-items">
+                <div class="item">
+                  <img src="./images/careers-main-01.png" alt="career01" />
+                  <span>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quaerat consequuntur nesciunt id similique unde autem
+                      quisquam reprehenderit blanditiis? Vel officia natus
+                      voluptas consequuntur eveniet ipsa ipsum expedita porro
+                      quae maxime?
+                    </p>
+                  </span>
+                </div>
+                <div class="item">
+                  <img src="./images/careers-main-02.png" alt="career02" />
+                  <span>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quaerat consequuntur nesciunt id similique unde autem
+                      quisquam reprehenderit blanditiis? Vel officia natus
+                      voluptas consequuntur eveniet ipsa ipsum expedita porro
+                      quae maxime?
+                    </p>
+                  </span>
+                </div>
+                <div class="item">
+                  <img src="./images/careers-main-03.png" alt="career03" />
+                  <span>
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quaerat consequuntur nesciunt id similique unde autem
+                      quisquam reprehenderit blanditiis? Vel officia natus
+                      voluptas consequuntur eveniet ipsa ipsum expedita porro
+                      quae maxime?
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <section class="cd-section visible" id="project">
+      <!-- <section class="cd-section" id="project">
         <div>
           <div class="content">
             <div class="project-inner">
@@ -66,7 +131,7 @@
                       illo fugiat at possimus, minima dolorem! Quod?
                     </p>
                     <ul>
-                      <li>Area : 1,670 M²</li>
+                      <li>Area : 1,670M²</li>
                       <li>Completed Date : March 2024</li>
                       <li>Architect : David</li>
                     </ul>
@@ -195,7 +260,7 @@
           </div>
         </div>
       </section>
-      <!-- 
+      
       <section class="cd-section" id="plan">
         <div>
           <div class="content">

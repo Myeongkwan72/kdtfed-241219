@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 450px;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  box-shadow: 0 0 8px #333333;
+  padding: 20px;
+}
+#container .day1 {
+  text-align: center;
+  font-family: "Jua";
+}
+#container .day1 h3 {
+  font-size: 3.2rem;
+  color: #666666;
+}
+#container .day1 .accent {
+  margin-top: 6px;
+}
+#container .day1 .accent span {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Jua";
+  color: #222222;
+}
+#container .bar {
+  width: 100%;
+  background: #747474;
+  color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 4rem;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+#container .day2 {
+  width: 100%;
+}
+#container .day2 ul {
+  height: 60px;
+  border-bottom: 1px dashed #cccccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+}
+#container .day2 ul .item-title {
+  padding-left: 20px;
+}
+#container .day2 ul .item-date {
+  color: #222222;
+  padding-right: 20px;
+  font-weight: bold;
+}

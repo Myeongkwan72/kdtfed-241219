@@ -1,0 +1,285 @@
+@font-face {
+  font-family: "youtube";
+  src: url("./fonts/AnyConv.com__KFOmCnqEu92Fr1Mu4mxPKTU1Kg.otf");
+}
+
+@mixin btnType {
+  display: inline-block;
+  font-size: 1.4rem;
+  background: map-get($map: $color, $key: bg);
+  padding: 8px 12px;
+  border-radius: 24px;
+  transition: all 0.3s;
+  &:hover {
+    background: map-get($map: $color, $key: dark);
+    color: map-get($map: $color, $key: light);
+    cursor: pointer;
+  }
+}
+
+$color: (
+  dark: #000000,
+  light: #ffffff,
+  bg: #f0f0f0,
+  accent: #dc143c,
+  sub: #9f9f9f,
+  ad: #1a76f5,
+  ad-sub: #f1f8ff,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "youtube";
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  width: 360px;
+  height: 100%;
+  background: map-get($map: $color, $key: light);
+  position: relative;
+  header {
+    width: 360px;
+    position: fixed;
+    z-index: 10;
+    background: map-get($map: $color, $key: dark);
+    #header-content {
+      width: 100%;
+      height: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      img {
+        height: 22px;
+        cursor: pointer;
+      }
+      #header_right {
+        width: 80px;
+        display: flex;
+        justify-content: space-between;
+        i {
+          color: map-get($map: $color, $key: light);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  figure {
+    width: 360px;
+    height: 220px;
+    position: fixed;
+    top: 50px;
+    z-index: 10;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  & > div {
+    width: 100%;
+    position: absolute;
+    top: 270px;
+    background: map-get($map: $color, $key: light);
+    padding: 12px;
+    .title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow: hidden;
+      .heading {
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+        .add {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          font: normal 1.2rem/1 "youtube";
+          color: map-get($map: $color, $key: sub);
+          span:last-child {
+            color: map-get($map: $color, $key: dark);
+            font-weight: bold;
+          }
+        }
+      }
+      .middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: bold;
+          img {
+            width: 36px;
+            border-radius: 50%;
+          }
+          span {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: map-get($map: $color, $key: sub);
+          }
+        }
+        .middle_btn {
+          span {
+            @include btnType();
+          }
+        }
+      }
+      .subinfo {
+        width: 546px;
+        display: flex;
+        gap: 12px;
+        overflow: hidden;
+        span {
+          @include btnType();
+          i {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            p {
+              font: normal 1.2rem/1 "arial";
+            }
+          }
+        }
+      }
+      .review {
+        background: map-get($map: $color, $key: bg);
+        padding: 12px;
+        border-radius: 10px;
+        .reviw_title {
+          span:last-child {
+            color: map-get($map: $color, $key: sub);
+            font-size: 1.2rem;
+          }
+        }
+        hr {
+          margin: 10px 0;
+        }
+        .review_content {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          img {
+            width: 30px;
+            border-radius: 50%;
+          }
+          .review_text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font: normal 1.2rem/1 "arial";
+          }
+        }
+      }
+    }
+    .hashlist {
+      position: sticky;
+      top: 270px;
+      width: 100%;
+      padding: 12px 0;
+      background: map-get($map: $color, $key: light);
+      overflow: hidden;
+      .hashcontent {
+        display: flex;
+        width: 546px;
+        gap: 12px;
+        background: map-get($map: $color, $key: light);
+        li {
+          a {
+            display: inline-block;
+            background: map-get($map: $color, $key: bg);
+            border-radius: 12px;
+            padding: 4px 6px;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    .ad01 {
+      width: 100%;
+      background: map-get($map: $color, $key: light);
+      .adimg {
+        width: 100%;
+        height: 379px;
+        background: url("./imgs/ad01.jpg") center/cover no-repeat;
+      }
+      .adtitle {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: map-get($map: $color, $key: ad);
+        background: map-get($map: $color, $key: ad-sub);
+        padding: 14px 10px;
+      }
+      .adinfo {
+        display: flex;
+        gap: 16px;
+        padding: 14px 10px;
+        .fa-facebook {
+          font-size: 4rem;
+          color: map-get($map: $color, $key: ad);
+        }
+        .addesc {
+          width: 100%;
+          span {
+            display: block;
+            &:first-child {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+            &:nth-child(2) {
+              margin: 6px 0;
+              color: map-get($map: $color, $key: sub);
+            }
+            &:last-child {
+              font-size: 1.4rem;
+              color: map-get($map: $color, $key: sub);
+              b {
+                color: map-get($map: $color, $key: dark);
+              }
+            }
+          }
+        }
+      }
+    }
+    .contents {
+      background: map-get($map: $color, $key: light);
+      .content {
+        width: 100%;
+        background: map-get($map: $color, $key: light);
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

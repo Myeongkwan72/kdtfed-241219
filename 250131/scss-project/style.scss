@@ -33,9 +33,9 @@ body {
     position: relative;
     .content {
       background: map-get($map: $color, $key: content-bg-color);
-      position: absolute;
       width: calc(100% - 40px);
       height: calc(100% - 80px);
+      position: absolute;
       left: 20px;
       bottom: 20px;
       overflow: hidden;
@@ -45,7 +45,53 @@ body {
 
 /* content-item */
 
-/* === project === */
+/* ==== about ==== */
+.about-inner {
+  height: 100%;
+  background: map-get($map: $color, $key: about-bg-color)
+    url("./images/line-drawing.png") right bottom no-repeat;
+  .about-items {
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 100px;
+    color: map-get($map: $color, $key: main-light-color);
+    .item {
+      margin: 100px 0;
+      gap: 20px;
+      display: flex;
+      cursor: pointer;
+      &:hover {
+        img {
+          filter: invert(0);
+        }
+        h3 {
+          color: map-get($map: $color, $key: main-dark-color);
+        }
+      }
+      img {
+        height: 100px;
+        filter: invert(1);
+        transition: all 0.5s;
+      }
+      span {
+        h3 {
+          font-size: 2.8rem;
+          font-weight: 500;
+          letter-spacing: -1px;
+          transition: color 0.5s;
+        }
+        p {
+          font-size: 1.8rem;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+/* ==== project === */
 .project-inner {
   height: 100%;
   background: map-get($map: $color, $key: main-light-color);
@@ -123,7 +169,7 @@ body {
           display: flex;
           div {
             text-align: center;
-            width: 33.3333%;
+            width: 33.33%;
             color: map-get($map: $color, $key: sub-font-color);
             span {
               display: block;
@@ -135,14 +181,14 @@ body {
           }
         }
         .view-project {
-          width: 220px;
-          display: inline-block;
           background: map-get($map: $color, $key: main-dark-color);
           color: map-get($map: $color, $key: main-light-color);
           text-transform: uppercase;
           font-size: 1.4rem;
           padding: 10px 14px;
           text-align: center;
+          display: inline-block;
+          width: 220px;
           .fas {
             transition: all 0.3s;
           }
@@ -151,7 +197,7 @@ body {
           }
         }
         &::before {
-          content: "01";
+          content: attr(data-text);
           font-size: 10rem;
           color: map-get($map: $color, $key: input-focus-color);
           position: absolute;
@@ -172,6 +218,7 @@ body {
     width: 25%;
     text-align: center;
     label {
+      position: relative;
       display: inline-block;
       width: 5px;
       height: 5px;
@@ -179,13 +226,12 @@ body {
       background: map-get($map: $color, $key: main-dark-color);
       border-radius: 50%;
       cursor: pointer;
-      position: relative;
       &::before {
         content: "";
         display: inline-block;
         position: absolute;
-        top: -6px;
         left: -6px;
+        top: -6px;
         width: 17px;
         height: 17px;
         border: 1px solid transparent;
@@ -199,7 +245,7 @@ body {
   }
 }
 
-/* === plan === */
+/* ==== plan === */
 .plan-inner {
   background: map-get($map: $color, $key: main-dark-color);
   height: 100%;
@@ -266,8 +312,8 @@ body {
             }
           }
           p {
-            width: 70%;
             font-size: 1.8rem;
+            width: 70%;
           }
         }
         .slick-dots li button:before {
@@ -282,7 +328,7 @@ body {
   }
 }
 
-/* === awards === */
+/* ==== awards === */
 .awards-inner {
   display: flex;
   height: 100%;
@@ -292,7 +338,7 @@ body {
     width: 100%;
     height: 100%;
     position: relative;
-    background: map-get($map: $color, $key: award-bg-color);
+    background: map-get($map: $color, $key: awards-bg-color);
     color: map-get($map: $color, $key: main-light-color);
     display: flex;
     justify-content: center;
@@ -318,15 +364,15 @@ body {
       }
       .view-awards {
         display: inline-block;
-        border: 1px solid map-get($map: $color, $key: btn-bg-color);
-        color: map-get($map: $color, $key: btn-bg-color);
+        border: 1px solid map-get($map: $color, $key: button-bg-color);
+        color: map-get($map: $color, $key: button-bg-color);
         padding: 12px 28px;
         border-radius: 30px;
         transition: all 0.5s;
         &:hover {
-          background: map-get($map: $color, $key: btn-sub-color);
+          background: map-get($map: $color, $key: button-sub-color);
           color: map-get($map: $color, $key: main-light-color);
-          border: 1px solid map-get($map: $color, $key: btn-sub-color);
+          border: 1px solid transparent;
         }
       }
     }
@@ -344,7 +390,7 @@ body {
   }
 }
 
-/* === rocation === */
+/* ==== location === */
 .location-inner {
   height: 100%;
   background: url("./images/background-location.jpg") center/cover no-repeat;
@@ -364,12 +410,11 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: map-get($map: $color, $key: btn-bg-color);
+    color: map-get($map: $color, $key: button-bg-color);
     display: flex;
     gap: 100px;
     .office {
       width: 60%;
-      gap: 40px;
       b {
         font-weight: normal;
       }
@@ -380,26 +425,36 @@ body {
       }
       p {
         font-size: 1.6rem;
-        line-height: 2.4rem;
+        line-height: 2.3rem;
       }
       span {
         color: map-get($map: $color, $key: main-light-color);
+        display: inline-block;
+        margin-top: 8px;
+      }
+      .customer {
+        margin-top: 40px;
       }
     }
     .service {
       width: 40%;
-      i {
-        font-size: 40px;
-        color: map-get($map: $color, $key: sub-title-color);
-      }
-      h3 {
-        color: map-get($map: $color, $key: main-light-color);
+      .service-item {
+        margin-bottom: 40px;
+        i {
+          color: map-get($map: $color, $key: sub-title-color);
+          font-size: 40px;
+        }
+        h3 {
+          color: map-get($map: $color, $key: main-light-color);
+          font-size: 2.4rem;
+          margin: 8px 0 4px;
+        }
       }
     }
   }
 }
 
-/* === contact === */
+/* ==== contact === */
 .contact-inner {
   width: 100%;
   height: 100%;
@@ -472,13 +527,180 @@ body {
         font-size: 2.6rem;
         margin: 20px 0 10px;
       }
-      ul,
-      li {
-        line-height: 2.6rem;
+      ul {
+        li {
+          line-height: 2.6rem;
+        }
       }
       p {
         line-height: 2.6rem;
       }
+    }
+  }
+}
+
+/* ==== modal ==== */
+.modal {
+  font-family: map-get($map: $fontFamily, $key: sans-font-family);
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: map-get($map: $color, $key: main-light-color);
+    z-index: 3;
+    .header-inner {
+      width: 95%;
+      margin: 0 auto;
+      height: 90px;
+      line-height: 90px;
+      border-bottom: 1px solid map-get($map: $color, $key: content-bg-color);
+      .modal-display {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .hiring-main {
+    height: 600px;
+    position: relative;
+    .hiring-heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: map-get($map: $color, $key: main-light-color);
+      span {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          width: 50px;
+          height: 2px;
+          background: map-get($map: $color, $key: main-light-color);
+          position: absolute;
+          top: 50%;
+        }
+        &::before {
+          right: 120%;
+        }
+        &::after {
+          left: 120%;
+        }
+      }
+      h1 {
+        font-size: 6rem;
+        font-weight: lighter;
+        margin-top: 20px;
+      }
+    }
+    &.project-main1 {
+      background: url("./images/project-main-01-01.jpg") center/cover no-repeat;
+    }
+  }
+  .hiring-info {
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: flex;
+    & > div {
+      width: 50%;
+      height: 600px;
+      &.center-parent {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .center-child {
+          width: 70%;
+          h2 {
+            font-size: 3.6rem;
+            font-weight: normal;
+          }
+          p {
+            font-size: 2rem;
+            font-weight: 300;
+            line-height: 2.5rem;
+          }
+        }
+      }
+      &.photo {
+        img {
+          width: 100%;
+        }
+        &.project-info {
+          font-size: 2rem;
+          font-weight: 300;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .hiring-slogan {
+    padding: 100px 0;
+    p {
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+      width: 70%;
+      margin: auto;
+      position: relative;
+      &::before {
+        content: ",,";
+        font-family: map-get($map: $fontFamily, $key: over-font-family);
+        font-size: 30rem;
+        color: map-get($map: $color, $key: content-bg-color);
+        transform: rotate(180deg);
+        position: absolute;
+        top: -140px;
+        left: -90px;
+      }
+    }
+  }
+}
+
+/* ==== feaher light ==== */
+.featherlight {
+  .featherlight-content {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: auto;
+    padding: 25px 25px 0;
+    border-bottom: 25px solid transparent;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+    background: #fff;
+    cursor: auto;
+    white-space: normal;
+    width: 80%;
+    height: 100%;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+    .featherlight-close-icon {
+      position: absolute;
+      z-index: 9999;
+      top: 10;
+      right: 10;
+      line-height: 25px;
+      width: 25px;
+      cursor: pointer;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.3);
+      color: #000;
+      border: none;
+      padding: 0;
+      font-size: 3rem;
     }
   }
 }

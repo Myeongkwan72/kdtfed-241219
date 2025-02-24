@@ -35,3 +35,13 @@ $(".history-slider").slick({
     },
   ],
 });
+
+// Slick Slider - 2
+$(".project-photo").slick({
+  infinite: true,
+  dots: true,
+  fade: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  cssEase: "linear",
+});
